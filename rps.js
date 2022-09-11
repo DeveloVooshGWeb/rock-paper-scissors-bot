@@ -260,8 +260,8 @@ funcs._rps = (rawPeople, message) => {
 		message.channel.send(`**\`Waiting For Players...\`**`).then((msg) => {
 			games[id] = [msg, peopleIds, choices, chose, peopleTags,
 				setTimeout(() => {
-					console.log(`Game Expired Because All Of The Players Weren't Ready (Game: ${id})`);
-					msg.edit(`**\`Game Expired Because All Of The Players Weren't Ready!\`**`);
+					console.log(`Game Expired Because Not All Of The Players Are Ready (Game: ${id})`);
+					msg.edit(`**\`Game Expired Because Not All Of The Players Are Ready!\`**`);
 					delete games[id];
 				}, 10000)
 			];
