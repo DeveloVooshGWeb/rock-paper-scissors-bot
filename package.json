@@ -1,0 +1,11 @@
+{
+  "name": "rpsbot",
+  "version": "1.0.0",
+  "main": "rps.js",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.3.0",
+    "dotenv": "^16.0.2",
+    "nanoid": "3.3.4"
+  }
+}
