@@ -162,7 +162,7 @@ client.on("interactionCreate", (interaction) => {
 					
 				choiceResult = cNames.join(" vs ");
 				
-				console.log(`${tie ? "Tie!" : `${winnerFormat} Wins!`} On Game: ${gameId}`);
+				console.log(`${tie ? "Tie!" : `${winnerFormat} Wins`} On Game: ${gameId}`);
 				games[gameId][0].edit(`${result}\n**\`\`\`${choiceResult}\`\`\`**`);
 				
 				clearTimeout(games[gameId][5]);
