@@ -104,7 +104,7 @@ client.on("interactionCreate", (interaction) => {
 			
 			clearTimeout(games[gameId][5]);
 			games[gameId][5] = setTimeout(() => {
-				games[gameId][0].edit(`**\`Game Expired Because All Of The Players Weren't Ready!\`**`);
+				games[gameId][0].edit(`**\`Game Expired Because Not All Of The Players Weren't Ready!\`**`);
 				delete games[gameId];
 			}, 10000)
 			
