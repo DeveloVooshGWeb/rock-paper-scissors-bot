@@ -13,6 +13,7 @@ Add The Bot To Your Discord Server \
 The Command Is !rps \
 The Syntax Is `!rps (argument)` \
 The Argument Can Either Be A Ping, An Id, Or The Start/End Of A Discord Tag. \
+ \
 You Can Also Fight Multiple People Following This Syntax `!rps (person 1) | (person 2) | (person 3)` \
 You Can Play With As Many People As You Want!
 
