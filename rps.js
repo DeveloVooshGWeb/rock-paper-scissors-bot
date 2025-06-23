@@ -6,6 +6,7 @@ const token = process.env.token || "";
 const { nanoid } = require("nanoid");
 
 const prefix = "-";
+const timeoutTime = 25000;
 const commands = ["rps"];
 const funcs = {};
 const games = {};
@@ -107,7 +108,7 @@ client.on("interactionCreate", (interaction) => {
 			games[gameId][5] = setTimeout(() => {
 				games[gameId][0].edit(`**\`Game Expired Because Not All Of The Players Are Ready!\`**`);
 				delete games[gameId];
-			}, 10000)
+			}, timeoutTime)
 			
 			if (!games[gameId][3].includes(false)) {
 				let choices = games[gameId][2];
@@ -149,7 +150,7 @@ client.on("interactionCreate", (interaction) => {
 				if (!tie) {
 					if (winTeam.length > 1) {
 						let lastWinner = winTeam.pop();
-						let winnerList = winTea3m.join(", ");
+						let winnerList = winTeam.join(", ");
 						winnerFormat = `${winnerList} And ${lastWinner}`;
 					}
 					
