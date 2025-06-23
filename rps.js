@@ -5,7 +5,7 @@ const token = process.env.token || "";
 
 const { nanoid } = require("nanoid");
 
-const prefix = "?";
+const prefix = "-";
 const commands = ["rps"];
 const funcs = {};
 const games = {};
