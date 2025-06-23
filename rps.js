@@ -89,6 +89,7 @@ client.on("interactionCreate", (interaction) => {
 					}
 					
 					games[gameId][2][userIdx] = btnId;
+					console.log(userId, " : ", btnId);
 					games[gameId][3][userIdx] = true;
 				}
 			}
@@ -192,7 +193,8 @@ funcs._rps = (rawPeople, message) => {
 	}
 	
 	let peopleIds = [message.author.id];
-	let peopleTags = [`${message.author.username}#${message.author.discriminator}`];
+	let peopleTags = [`@${message.author.username}`];
+	console.log(peopleTags);
 	let peopleFound = [true];
 	
 	for (i = 0; i < people.length; i++) {
@@ -203,9 +205,10 @@ funcs._rps = (rawPeople, message) => {
 
 	message.guild.members.cache.each((member) => {
 		let user = member.user;
+		//console.log(user);
 		if (!user.bot) {
 			let pIdx = 0;
-			let tag = `${user.username}#${user.discriminator}`;
+			let tag = `@${user.username}`;
 			let found = false;
 			
 			for (pIdx = 0; pIdx < people.length; pIdx++) {
